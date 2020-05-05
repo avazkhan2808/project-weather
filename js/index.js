@@ -12,6 +12,7 @@ const KELVIN = 273.15;
 let isFahrentheit = false;
 form.addEventListener('submit', (ev) => {
 	ev.preventDefault();
+	if (input.value === '') return;
 	fetchWeather();
 	form.reset();
 });
@@ -68,4 +69,3 @@ function convertToFahrenheit(tempCelcius) {
 	isFahrentheit = true;
 	return tempFahrenheit;
 }
-
